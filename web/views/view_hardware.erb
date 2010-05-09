@@ -1,0 +1,24 @@
+<div class='hardware'>
+	<div class='header'>
+		
+		<div class='serialnumber'>
+			<%= @hw.serialnumber %>
+		</div>
+		<div class='location'>      
+			<%= @hw.location %>   
+		</div>
+	</div>
+	<div class='history_list'>
+		<ul>
+			<% @hw.history.each do |tx| %> 
+				<li>
+				   <ul>
+						<% tx.each do |line| %>
+				   			<li><%= line  %></li>           
+						<% end %>
+				   </ul>            
+				</li>
+			<% end %>           
+		</ul>              
+	</div>
+</div>
