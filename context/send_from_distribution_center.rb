@@ -7,6 +7,7 @@ require File.dirname(__FILE__) + "/../roles/sender"
 require File.dirname(__FILE__) + "/../roles/receiver"
 require File.dirname(__FILE__) + "/../repository/couch_repository"
 
+    
 class SendFromDistributionCenter
   include CouchRepository 
   
@@ -30,7 +31,3 @@ class SendFromDistributionCenter
   end 
   
 end   
-
-DB = "http://localhost:5984/hwlog"
-a = SendFromDistributionCenter.new('ABC-123', '12344556678')
-a.send

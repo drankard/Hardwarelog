@@ -20,8 +20,8 @@ module CouchRepository
                  
     doc = find_existing_doc(url)
     if doc.empty?                                                      
-      doc = Hash.new 
-      hash['_id'] = hw.to_s 
+      doc = Hash.new        
+      doc['_id'] = hw.serialnumber 
     end  
 
     doc['location'] = location.to_s
